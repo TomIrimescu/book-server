@@ -9,7 +9,7 @@ async function main() {
   await createConnection();
   const schema = await buildSchema({ resolvers: [BookResolver] });
   const server = new ApolloServer({ schema });
-  await server.listen(4000);
+  await server.listen(5000);
   console.log("Server has started!");
 }
 
