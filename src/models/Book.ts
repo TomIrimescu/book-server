@@ -1,9 +1,10 @@
-import { Entity, BaseEntity, PrimaryGeneratedColumn, Column } from "typeorm";
+import { Entity, PrimaryGeneratedColumn, Column } from "typeorm";
 import { ObjectType, Field, ID } from "type-graphql";
+import { TimeColumns } from './TimeColumns';
 
 @Entity()
 @ObjectType()
-export class Book extends BaseEntity {
+export class Book extends TimeColumns {
   @Field(() => ID)
   @PrimaryGeneratedColumn()
   id: string;
