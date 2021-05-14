@@ -1,23 +1,29 @@
 {
-  "name": "learn-typegraphql",
+  "name": "book",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon -w src --ext ts --exec ts-node src/index.ts"
+    "start": "ts-node-dev --respawn src/index.ts"
   },
-  "author": "Rahman Fadhil <rhmnfadhil@gmail.com> (https://rahmanfadhil.com/)",
-  "license": "MIT",
+  "author": "Tom Irimescu",
+  "license": "",
   "dependencies": {
-    "apollo-server": "^2.9.16",
+    "apollo-server-express": "^2.24.0",
+    "dotenv": "^9.0.1",
+    "express": "^4.17.1",
+    "graphql": "^14.4.1",
+    "pg": "^8.6.0",
     "reflect-metadata": "^0.1.13",
-    "sqlite3": "^4.1.1",
     "type-graphql": "^0.17.6",
     "typeorm": "^0.2.22"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.10",
+    "@types/express": "^4.17.11",
+    "@types/pg": "^7.14.11",
     "nodemon": "^2.0.2",
-    "ts-node": "^8.6.0",
+    "ts-node-dev": "^1.1.6",
     "typescript": "^3.7.4"
   }
 }
