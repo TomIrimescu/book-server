@@ -3,12 +3,17 @@ import express from 'express';
 import { ApolloServer } from "apollo-server-express";
 import { buildSchema } from "type-graphql";
 import "reflect-metadata";
-
 import { BookResolver } from "./resolvers/BookResolver";
+
+if (process.env.NODE_ENV) {
+  console.log("environment: " + process.env.NODE_ENV);
+} else {
+  console.log("environment: NO ENVIRONMENT SET");
+}
 
 require("dotenv").config();
 
-async function main() {
+const main = async () => {
   await createConnection();
   const schema = await buildSchema({ resolvers: [BookResolver] });
   const server = new ApolloServer({ schema });
@@ -32,6 +37,6 @@ async function main() {
       `GraphQl endpoint found at http://localhost:${process.env.SERVER_PORT}${server.graphqlPath}`
     );
   });
-}
+};
 
 main();
