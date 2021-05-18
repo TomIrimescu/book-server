@@ -1,8 +1,12 @@
-import { Entity, PrimaryGeneratedColumn, Column } from "typeorm";
+import {
+  Entity,
+  PrimaryGeneratedColumn,
+  Column
+} from "typeorm";
 import { ObjectType, Field, ID } from "type-graphql";
 import { TimeColumns } from './TimeColumns';
 
-@Entity()
+@Entity({ name: "Books" })
 @ObjectType()
 export class Book extends TimeColumns {
   @Field(() => ID)
