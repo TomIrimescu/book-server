@@ -1,10 +1,10 @@
 import { InputType, Field } from "type-graphql";
 
 @InputType()
-export class CreateBookInput {
+export class LoginUserInput {
   @Field({ nullable: false })
-  title: string;
+  userName: string;
 
   @Field({ nullable: false })
-  author: string;
+  password: string;
 }
