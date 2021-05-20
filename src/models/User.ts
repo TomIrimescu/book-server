@@ -7,7 +7,6 @@ import { Length } from "class-validator";
 import { ObjectType, Field, ID } from "type-graphql";
 import { TimeColumns } from './TimeColumns';
 
-
 @Entity({ name: "Users" })
 @ObjectType()
 export class User extends TimeColumns {
